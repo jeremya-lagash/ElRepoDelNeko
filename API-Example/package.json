@@ -2,18 +2,26 @@
   "name": "api-example",
   "version": "1.0.0",
   "description": "Node.js on Docker with Express",
-  "author": "Ignacio Aedo <ignaciods.3108@gmail.com>",
+  "author": "Jeremy Andrades <jeremya@lagash.com>",
   "main": "server.js",
   "scripts": {
     "start": "cross-env APPLICATION_ENV=qa node server.js",
+    "start:dev": "nodemon server.js",
+    "sonarqube": "sonar-scanner",
     "prod": "cross-env APPLICATION_ENV=prod node server.js"
   },
+  "license": "ISC",
   "dependencies": {
     "applicationinsights": "^1.0.3",
     "cors": "^2.8.5",
+    "cross-env": "^5.2.0",
     "dotenv": "^8.0.0",
     "express": "^4.16.1",
     "node-fetch": "^2.6.0",
-    "cross-env": "^5.2.0"
+    "nodemon": "^2.0.2",
+    "qr-image": "^3.2.0"
+  },
+  "devDependencies": {
+    "sonar-scanner": "^3.1.0"
   }
 }
